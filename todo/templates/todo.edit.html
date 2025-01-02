@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block contents %}
+        <div class="container">
+
+            <h1>To Do</h1>
+            <p>Edite a Tarefa</p>
+
+            <form action="{% url 'edit' task.id %}" method="POST">
+                {% csrf_token %}
+                <div class="input-container">
+                    <input type="text" id="task-input" name="task" value="{{ task.task }}" placeholder="Adicione uma tarefa" required />
+                    <button id="edit-task-btn">Editar</button>
+                </div> <!--END input-container -->
+            </form>
+
+            <a href="{% url 'list' %}"><button id="back-task-btn">Voltar</button></a>
+
+        </div> <!--END container -->
+{% endblock contents %}

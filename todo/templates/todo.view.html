@@ -6,11 +6,33 @@
 
 {% block contents %}
         <div class="container">
-            <h1>Lista de Tarefas</h1>
-            <div class="input-container">
-            <input type="text" id="task-input" placeholder="Adicione uma tarefa" />
-            <button id="add-task-btn">Adicionar</button>
-            </div>
-            <ul id="task-list"></ul>
-        </div>
+
+            <h1>To Do</h1>
+            <p>Lista de Tarefas</p>
+
+            <form action="{% url 'list' %}" method="POST">
+                {% csrf_token %}
+                <div class="input-container">
+                        <input type="text" id="task-input" name="task" focus="fused" placeholder="Adicione uma tarefa" required />
+                        <button id="add-task-btn">Adicionar</button>
+                </div> <!--END input-container -->
+            </form>
+
+            <ul id="task-list">
+                {% if tasks %}
+                    {% for task in tasks %}
+                    <li>
+                        <span id="task-text">{{ task.task }}</span>
+                        <div class="button-container">
+                            <a href="{% url 'edit' task.id %}"><button id="edit-btn">Editar</button></a>
+                            <a href="{% url 'delete' task.id %}"><button id="delete-btn">Excluir</button></a>
+                        </div> <!--END button-container -->
+                    </li>
+                    {% endfor %}
+                {% else %}
+                <div class="result">Nenhuma tarefa cadastrada.</div>
+                {% endif %}
+            </ul>
+
+        </div> <!--END container -->
 {% endblock contents%}
