@@ -1,0 +1,8 @@
+asarPy==1.0.1
+asgiref==3.8.1
+Django==5.1.4
+django-decouple==2.1
+git-filter-repo==2.47.0
+gunicorn==23.0.0
+packaging==24.2
+sqlparse==0.5.3
