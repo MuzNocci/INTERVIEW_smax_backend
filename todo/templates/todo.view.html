@@ -1,3 +1,5 @@
+{% extends 'base/base.html' %}
+
 {% load static %}
 
 {% block title %}{{ title }}{% endblock title %}
@@ -12,7 +14,3 @@
             <ul id="task-list"></ul>
         </div>
 {% endblock contents%}
-
-{% block scripts %}
-        <script src="{% static "assets/scripts/scritps.js" %}"></script>
-{% endblock scripts %}
