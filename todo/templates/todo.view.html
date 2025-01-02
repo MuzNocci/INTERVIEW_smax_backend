@@ -1,3 +1,18 @@
 {% load static %}
 
 {% block title %}{{ title }}{% endblock title %}
+
+{% block contents %}
+        <div class="container">
+            <h1>Lista de Tarefas</h1>
+            <div class="input-container">
+            <input type="text" id="task-input" placeholder="Adicione uma tarefa" />
+            <button id="add-task-btn">Adicionar</button>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+{% endblock contents%}
+
+{% block scripts %}
+        <script src="{% static "assets/scripts/scritps.js" %}"></script>
+{% endblock scripts %}

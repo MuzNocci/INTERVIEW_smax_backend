@@ -9,7 +9,7 @@ class TodoView(View):
     def get(self, request):
 
         context = {
-            'title':'To do list'
+            'title':'ToDO | Sistema de Lista de Tarefas'
         }
         return render(request, 'todo.view.html', context)
     
