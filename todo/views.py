@@ -5,9 +5,9 @@ from django.views import View
 
 class HomeView(View):
 
-    def get(request):
+    def get(self, request):
 
         context = {
             'title':'To do list'
         }
-        return render(request, 'page.html', context)
+        return render(request, 'todo.view.html', context)
