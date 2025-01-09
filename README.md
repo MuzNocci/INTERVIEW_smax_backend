@@ -2,9 +2,8 @@
 Um sistema de lista de tarefas desenvolvido em Python com Django, projetado para demonstrar habilidades em desenvolvimento backend.
 
 ## Funcionalidades
-- Criação, leitura, atualização e exclusão (CRUD) de tarefas.
-- Organização de tarefas por status (pendente, em andamento, concluída).
 - Sistema simples e eficiente para gerenciamento de tarefas.
+- Criação, leitura, atualização e exclusão (CRUD) de tarefas.
 
 ## Tecnologias Utilizadas
 - **Linguagem**: Python 3.x
