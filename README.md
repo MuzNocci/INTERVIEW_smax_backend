@@ -36,4 +36,4 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
 ### 5. Comando para iniciar o servidor de produção (http://localhost:8000)
 - python manage.py collectstatic
-- gunicorn --workers 5 --bind 0.0.0.0:8000 core.wsgi:application
+- gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 5
